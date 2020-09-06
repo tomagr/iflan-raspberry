@@ -1,4 +1,4 @@
-from logs.helpers.tmp_hum_log_api import post_tmp_hum_log
+from logs.helpers.iflan_api import post_tmp_hum_log
 
 
 def send_tmp_hum():

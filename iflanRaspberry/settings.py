@@ -20,6 +20,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ew*j!8o$%ebvv)di*c#wk#hm*r+8y)paipi1(lx=t4ru#hd@5z'
+API_URL = 'http://api.iflan.house/1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
