@@ -15,8 +15,9 @@ def read_sound():
     GPIO.add_event_callback(channel, callback)
     while True:
         time.sleep(10)
+        print("while ended")
 
 
 def callback(channel):
-    post_noise_log(device_id)
-    print("Sound Detected! Channel:" + str(channel))
+    response = post_noise_log(device_id)
+    print("Sound Detected! Channel: " + str(channel) + " - Response: " + str(response))
