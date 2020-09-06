@@ -22,4 +22,4 @@ def read_sound():
 def callback(channel):
     response = post_noise_log(device_id)
     print("Sound Detected! Channel: " + str(channel) + " - Response: " + str(response))
-    GPIO.cleanup()
+    #GPIO.cleanup()
