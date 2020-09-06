@@ -1,3 +1,8 @@
+#### To run the server
+- `python3 manage.py runserver`
+- `python manage.py migrate` In case you dont have them
+- `python manage.py shell`
+
 Useful cron jobs comands:
 - `python3 manage.py crontab add`
 - `python3 manage.py crontab show`
