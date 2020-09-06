@@ -9,6 +9,7 @@ device_id = 1
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(channel, GPIO.IN)
 
+
 def read_sound():
     GPIO.add_event_detect(channel, GPIO.BOTH, bouncetime=300)  # let us know when the pin goes HIGH or LOW
     GPIO.add_event_callback(channel, callback)
@@ -17,8 +18,5 @@ def read_sound():
 
 
 def callback(channel):
-    if GPIO.input(channel):
-        post_noise_log(device_id)
-        print("Sound Detected! Channel:" + str(channel))
-    else:
-        print("No sound? Channel:" + str(channel))
+    post_noise_log(device_id)
+    print("Sound Detected! Channel:" + str(channel))
