@@ -17,7 +17,10 @@ def post_tmp_hum(tmp, hum):
         print("Failed to retrieve data from humidity sensor")
 
 
-while True:
-    humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
-    post_tmp_hum(temperature, humidity)
-    time.sleep(DELAY)
+def get_tmp_hum():
+    while True:
+        humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
+        tmp = round(temperature, 2)
+        hum = round(humidity, 2)
+        post_tmp_hum(tmp, hum)
+        time.sleep(DELAY)
