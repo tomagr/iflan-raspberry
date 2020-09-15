@@ -4,15 +4,14 @@ import time
 
 DHT_SENSOR = Adafruit_DHT.DHT22
 DHT_PIN = 4
-DELAY = 10  # Seconds
+DELAY = 60  # Seconds
 
 
 def post_tmp_hum(tmp, hum):
     if hum is not None or tmp is not None:
-        post_tmp_hum_log(tmp, hum)
-        print("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(tmp, hum))
-        print(tmp)
-        print(hum)
+        response = post_tmp_hum_log(tmp, hum)
+        print(response)
+        print("Response: " + response + " - Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(tmp, hum))
     else:
         print("Failed to retrieve data from humidity sensor")
 
