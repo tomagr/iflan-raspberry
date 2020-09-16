@@ -4,7 +4,7 @@ from logs.logger import Log
 import Adafruit_DHT
 import time
 
-DELAY = 60  # Seconds
+DELAY = 120  # Seconds
 DHT_SENSOR = Adafruit_DHT.DHT22
 
 
@@ -13,7 +13,7 @@ def get_tmp_hum():
         humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, Settings.DHT_PIN)
         tmp = round(temperature, 2)
         hum = round(humidity, 2)
-        post_tmp_hum_log(tmp, hum)
+        read_tmp_hum(tmp, hum)
         time.sleep(DELAY)
 
 
