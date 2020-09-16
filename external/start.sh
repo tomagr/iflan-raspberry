@@ -1,4 +1,5 @@
 #!/bin/bash
 
 # Start serial
-python3 startup_scripts/tmp_hum.py
+cd startup_scripts
+python3 init_tmp_hum.py
