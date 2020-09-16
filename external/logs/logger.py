@@ -8,7 +8,7 @@ class Log:
             filename=Settings.LOG_FILE,
             filemode='a',
             format='%(asctime)s %(name)s %(levelname)s %(message)s',
-            datefmt='"%d %b %Y - %H:%M:%S',
+            datefmt='%d %b %Y - %H:%M:%S',
             level=logging.WARNING
             # level=logging.DEBUG
         )
@@ -16,5 +16,4 @@ class Log:
     @classmethod
     def write(self, message):
         self.__init__(self)
-        logging.warning(message) #should be the same as 'level' in config
-        return "Writeen!"
+        logging.warning(message)  # should be the same as 'level' in config

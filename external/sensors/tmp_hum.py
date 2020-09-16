@@ -20,6 +20,7 @@ def get_tmp_hum():
 def read_tmp_hum(tmp, hum):
     if hum is not None or tmp is not None:
         response = post_tmp_hum_log(tmp, hum)
-        Log.write("Response: " + str(response) + " - Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(tmp, hum))
+        message = "Response: " + str(response) + " - Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(tmp, hum)
+        Log.write(message)
     else:
         Log.write("Failed to retrieve data from humidity sensor")
