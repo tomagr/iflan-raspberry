@@ -1,5 +1,6 @@
 .idea/
 nohup.out
+external/logs/iflan_logs.txt
 
 ### Django ###
 *.log

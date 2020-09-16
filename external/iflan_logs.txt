@@ -1,0 +1,4 @@
+17:57:49,946 root INFO <logs.logger.Log object at 0x104d04438>
+17:58:36,600 root INFO yaas
+18:00:17,603 root INFO dwewe
+18:00:26,114 root INFO dwew222e
