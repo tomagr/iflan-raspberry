@@ -8,7 +8,7 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(Settings.CHANNEL, GPIO.IN)
 PAUSE_TIME_MIL = 1000  # 5 Seconds
-PAUSE_TIME_SEG = 1
+PAUSE_TIME_SEG = 5
 
 
 def read_sound():
@@ -26,7 +26,9 @@ def read_sound():
 
 
 def callback(channel):
-	print("CALLBACK")
+	print("Poop")
+	Log.write("Poop")
 	response = post_noise_log(Settings.DEVICE_ID)
+	print("============= CACAAAAA ============" + str(channel) + " ===== " + str(response))
 	Log.write("Sound Detected! Channel: " + str(channel) + " - Response: " + str(response))
-	# GPIO.cleanup()
+# GPIO.cleanup()
