@@ -24,7 +24,7 @@ def read_sound():
         time.sleep(PAUSE_TIME_SEG)
 
 
-def callback():
+def callback(channel):
     response = post_noise_log(Settings.DEVICE_ID)
-    Log.write("Sound Detected! Channel: " + str(Settings.CHANNEL) + " - Response: " + str(response))
+    Log.write("Sound Detected! Channel: " + str(channel) + " - Response: " + str(response))
     # GPIO.cleanup()
