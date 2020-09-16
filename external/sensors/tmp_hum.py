@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from api.api import post_tmp_hum_log
 from config.settings import Settings
 from logs.logger import Log
