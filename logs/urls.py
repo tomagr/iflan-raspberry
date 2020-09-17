@@ -8,5 +8,5 @@ urlpatterns = [
     path('', views.index, name='index'),
 ]
 
-get_tmp_hum()
-read_sound()
+# get_tmp_hum()
+# read_sound()
