@@ -4,4 +4,4 @@
 - `python3 manage.py shell`
 
 #### Add scripts to startup
-- `sudo vim /etc/rc.local`:
+- `sudo vim /etc/rc.local`: # Check rc.local.sample
