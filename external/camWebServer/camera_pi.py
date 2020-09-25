@@ -9,7 +9,7 @@ import time
 import io
 import threading
 import picamera
-
+import datetime as dt
 
 class Camera(object):
     thread = None  # background thread that reads frames from camera
@@ -41,7 +41,7 @@ class Camera(object):
 
             # let camera warm up
             camera.start_preview()
-	    camera.annotate_text = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            camera.annotate_text = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             time.sleep(2)
 
             stream = io.BytesIO()
