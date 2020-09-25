@@ -41,14 +41,14 @@ class Camera(object):
 
             # let camera warm up
             camera.start_preview()
-            camera.annotate_text_size = 20
-            # camera.annotate_text = dt.datetime.now().strftime('%H:%M:%S - %d/%m')
+            camera.annotate_text_size = 15
+
             time.sleep(2)
 
             stream = io.BytesIO()
             for foo in camera.capture_continuous(stream, 'jpeg',
                                                  use_video_port=True):
-                camera.annotate_text = dt.datetime.now().strftime('%H:%M:%S - %d/%m')
+                camera.annotate_text = "iFlan " + dt.datetime.now().strftime('%H:%M:%S - %d/%m')
                 # store frame
                 stream.seek(0)
                 cls.frame = stream.read()
