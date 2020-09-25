@@ -34,6 +34,15 @@ def video_feed():
     return Response(gen(Camera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
+@app.route("/audio")
+def streamwav():
+    def generate():
+        with open("audio/test.wav", "rb") as fwav:
+            data = fwav.read(1024)
+            while data:
+                yield data
+                data = fwav.read(1024)
+    return Response(generate(), mimetype="audio/x-wav")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port =80, debug=True, threaded=True)
