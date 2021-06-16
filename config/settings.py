@@ -1,5 +1,5 @@
 class Settings:
-    API_URL = 'https://api.iflan.house/1'
+    API_URL = 'https://iflan.api.lazlo.boutique/1'
     DEVICE_ID = 1
     CHANNEL = 17
     DHT_PIN = 4
