@@ -1,6 +1,7 @@
 .idea/
 nohup.out
 logs/iflan_logs.txt
+.DS_Store
 
 ### Django ###
 *.log
